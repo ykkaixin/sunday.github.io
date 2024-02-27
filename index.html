@@ -1,2 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirect to Lucky</title>
+</head>
+<body>
+
+<input type="text" id="numberInput" placeholder="Enter 4 numbers">
+<button onclick="redirectToLucky()">Go</button>
+
+<script>
+function redirectToLucky() {
+    // 获取输入框中的值
+    var numbers = document.getElementById("numberInput").value;
+    
+    // 检查输入是否为4个数字
+    if(numbers.length === 4 && /^\d+$/.test(numbers)) {
+        // 构建跳转链接
+        var redirectUrl = "https://lucky.nocode.com/v2/s/" + numbers;
+        // 重定向到链接
+        window.location.href = redirectUrl;
+    } else {
+        alert("Please enter 4 numbers!");
+    }
+}
+</script>
+
+</body>
+</html>
 hello
 ads
